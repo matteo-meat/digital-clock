@@ -11,9 +11,9 @@ class Clock:
         self.newWindow.title("Digital clock")
 
         self.mark = Label(self.newWindow,
-                     font=("calibri", 40, "bold"),
-                     pady=150,
-                     foreground="black")
+                          font=("calibri", 40, "bold"),
+                          pady=150,
+                          foreground="black")
         self.mark.pack(anchor="center")
 
         close_bt = Button(self.newWindow, text="Close", command=self.close)
@@ -22,7 +22,7 @@ class Clock:
 
     def time(self):
         date_time = strftime("%A, %d %B %Y\n"
-                                 "%H:%M:%S")
+                             "%H:%M:%S")
         self.mark.config(text=date_time)
         self.mark.after(1000, self.time)  # calls "time" function after 1000ms (1s)
 
